@@ -11,7 +11,8 @@ btn.addEventListener("click", function () {
 
 const testbtn = document.querySelector("#test");
 
-btn.addEventListener("click", async function () {
+testbtn.addEventListener("click", async function () {
+  console.log("hello");
   const data = await fetch("/.netlify/functions/index");
   console.log(data);
 });
