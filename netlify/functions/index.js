@@ -7,10 +7,10 @@ exports.handler = async (request) => {
       (result) => result.json()
     );
     console.log(234, data);
-    return Response.json({
+    return {
       request,
       data,
-    });
+    };
   } catch (error) {
     console.log(error);
   }
