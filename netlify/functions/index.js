@@ -2,10 +2,10 @@ const API_ENDPOINT = "https://cat-fact.herokuapp.com/facts";
 
 export default async (request, context) => {
   try {
-    return {
+    return Response.json({
       request,
       context,
-    };
+    });
   } catch (error) {
     console.log(error);
   }
