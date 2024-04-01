@@ -1,0 +1,22 @@
+{
+  "keys": [
+    {
+      "kty": "EC",
+      "use": "sig",
+      "crv": "P-256",
+      "kid": "jenn_testapp_signing",
+      "x": "AJaI5TTOgMgfqCtmWoFhyt_RzYG-YCGznVXLzQRpwBo",
+      "y": "Vmdeb67y_Ec3Dd_xHAr8LRfkYkOLQDd2pv6aBfa15YE",
+      "alg": "ES256"
+    },
+    {
+      "kty": "EC",
+      "use": "enc",
+      "crv": "P-256",
+      "kid": "jenn_testapp_encryption",
+      "x": "HARmytlvaPs6qdlh03_q5Jw37QUE-L9ttIMEmL4puYQ",
+      "y": "5s4pppn1OlWvC5Yh3dvErLuZeRgZgqLKcMFarQIeNjE",
+      "alg": "ECDH-ES+A128KW"
+    }
+  ]
+}
