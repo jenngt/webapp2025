@@ -111,7 +111,7 @@ async function generateClientAssertion() {
 
     const postData = {
       client_id: "btKmtZ8DAU8NZlK0FSVwNayGI93ou7fO",
-      redirect_uri: "https://neon-macaron-12345.netlify.app/callback",
+      redirect_uri: "https://jennlimwebapp.netlify.app/callback",
       grant_type: "authorization_code",
       code: myParam,
       client_assertion_type:
@@ -120,7 +120,7 @@ async function generateClientAssertion() {
     };
 
     const params = new URLSearchParams(postData);
-    const data = await fetch(`/.netlify/functions/index?${params}`);
+    const data = await fetch(`/.netlify/functions/index?${params.toString()}`);
 
     console.log(data);
 
