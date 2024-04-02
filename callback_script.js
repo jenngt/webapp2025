@@ -119,6 +119,11 @@ async function generateClientAssertion() {
       client_assertion: clientAssertion, //referencing the variables
     };
 
+    const params = new URLSearchParams(postData);
+    const data = await fetch(`/.netlify/functions/index?${params}`);
+
+    console.log(data);
+
     // Create the fetch request code from here is to start calling api.
     fetch("https://stg-id.singpass.gov.sg/token", {
       method: "POST",

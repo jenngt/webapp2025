@@ -1,15 +1,24 @@
-const API_ENDPOINT = "https://cat-fact.herokuapp.com/facts";
-
-exports.handler = async (request) => {
+exports.handler = async (event) => {
   try {
     console.log(123);
-    let data = await fetch("https://pokeapi.co/api/v2/pokemon/ditto").then(
-      (result) => result.json()
-    );
-    console.log(234, data);
+    // const {
+    //   client_id,
+    //   redirect_uri,
+    //   grant_type,
+    //   code,
+    //   client_assertion_type,
+    //   client_assertion,
+    // } = event.queryStringParameters;
+    await fetch("https://stg-id.singpass.gov.sg/token", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/x-www-form-urlencoded",
+      },
+      body: new URLSearchParams(event.queryStringParameters),
+    }).then((result) => console.log(result.data));
     return {
       statusCode: 200,
-      body: JSON.stringify({ data: "success" }),
+      body: JSON.stringify({ data: result.data }),
       headers: {
         "Content-Type": "application/json",
       },
