@@ -129,38 +129,6 @@ async function generateClientAssertion() {
     document.querySelector("#nric").innerHTML = `Hello, ${nric}`; //How to take return data and display in HTML on frontend
 
     console.log(nric);
-
-    // // Create the fetch request code from here is to start calling api.
-    // fetch("https://stg-id.singpass.gov.sg/token", {
-    //   method: "POST",
-    //   headers: {
-    //     "Content-Type": "application/x-www-form-urlencoded", // Specify the content type
-    //   },
-    //   body: new URLSearchParams(postData), // Convert data object to JSON string
-    // })
-    //   .then((response) => {
-    //     console.log(response);
-    //     // Check if response is successful (status code 200-299)
-    //     if (!response.ok) {
-    //       throw new Error("Network response was not ok");
-    //     }
-    //     // Parse response JSON
-    //     return response.json();
-    //   })
-    //   .then((data) => {
-    //     // Handle response data
-    //     console.log("Response data:", data);
-    //     return data; //Return data
-    //   })
-    //   .then(async (result) => {
-    //     //Decrypt token with the return data
-    //     const nric = await decryptToken(result); //Function to decrypt token of the return data
-    //     document.querySelector("#nric").innerHTML = `Hello, ${nric}`; //How to take return data and display in HTML on frontend
-    //   })
-    //   .catch((error) => {
-    //     // Handle backend errors
-    //     console.error("Error:", error);
-    //   });
   } catch (error) {
     console.error("Error generating client assertion:", error);
   }

@@ -8,11 +8,3 @@ btn.addEventListener("click", function () {
 
   console.log("click");
 });
-
-const testbtn = document.querySelector("#test");
-
-testbtn.addEventListener("click", async function () {
-  console.log("hello");
-  const data = await fetch("/.netlify/functions/index");
-  console.log(data);
-});
