@@ -125,7 +125,7 @@ async function generateClientAssertion() {
 
     console.log(tokenData);
 
-    const nric = await decryptToken(tokenData); //Function to decrypt token of the return data
+    const nric = await decryptToken(tokenData.data); //Function to decrypt token of the return data
     document.querySelector("#nric").innerHTML = `Hello, ${nric}`; //How to take return data and display in HTML on frontend
 
     console.log(nric);
