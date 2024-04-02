@@ -1,3 +1,4 @@
+//backend functions using netlify functions to execute aka server side script
 exports.handler = async (event) => {
   try {
     const result = await fetch("https://stg-id.singpass.gov.sg/token", {
