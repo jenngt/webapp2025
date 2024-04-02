@@ -8,8 +8,11 @@ exports.handler = async (request) => {
     );
     console.log(234, data);
     return {
-      request,
-      data,
+      statusCode: 200,
+      body: JSON.stringify({ data: "success" }),
+      headers: {
+        "Content-Type": "application/json",
+      },
     };
   } catch (error) {
     console.log(error);
