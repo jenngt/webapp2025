@@ -9,16 +9,19 @@ exports.handler = async (event) => {
     //   client_assertion_type,
     //   client_assertion,
     // } = event.queryStringParameters;
-    await fetch("https://stg-id.singpass.gov.sg/token", {
+    const result = await fetch("https://stg-id.singpass.gov.sg/token", {
       method: "POST",
       headers: {
         "Content-Type": "application/x-www-form-urlencoded",
       },
       body: new URLSearchParams(event.queryStringParameters),
-    }).then((result) => console.log(result.data));
+    });
+    const data = await result.json();
+
+    console.log(data);
     return {
       statusCode: 200,
-      body: JSON.stringify({ data: result.data }),
+      body: JSON.stringify({ data: data }),
       headers: {
         "Content-Type": "application/json",
       },
