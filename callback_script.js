@@ -113,7 +113,7 @@ async function generateClientAssertion() {
     const postData = {
       //Declaration of payload is a set of data to be sent to Singpass api for authentication to prove my identity and retrieve the id_token
       client_id: "btKmtZ8DAU8NZlK0FSVwNayGI93ou7fO",
-      redirect_uri: "https://jennlimwebapp.netlify.app/callback",
+      redirect_uri: "https://jennlimwebapp2025.netlify.app/callback",
       grant_type: "authorization_code",
       code: myParam,
       client_assertion_type:
